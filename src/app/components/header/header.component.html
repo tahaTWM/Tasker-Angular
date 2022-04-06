@@ -1,6 +1,6 @@
 <header>
-  <p>
-    {{ title }}
-  </p>
-  <app-button color="{{'green'}}" text="{{'Add'}}"></app-button>
+    <p>
+        {{ title }}
+    </p>
+    <app-button color="{{showAddTask ? 'red': 'green'}}" text="{{showAddTask ? 'Colse': 'Add Task'}}" (btnClick)="toggleAddTask()"></app-button>
 </header>

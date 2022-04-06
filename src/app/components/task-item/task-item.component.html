@@ -1,5 +1,6 @@
 <div [ngClass]="{reminder: task.reminder}" class="task">
   <h3>{{ task.text }}
+    <fa-icon (click)="deleteTask(task)" [icon]="faEdit" [ngStyle]="{'color':'blue'}"></fa-icon>
     <fa-icon (click)="deleteTask(task)" [icon]="faCoffee" [ngStyle]="{'color':'red'}"></fa-icon>
   </h3>
   <p>{{ task.day }}</p>
