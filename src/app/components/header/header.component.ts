@@ -11,7 +11,9 @@ export class HeaderComponent implements OnInit {
   showAddTask!: boolean;
   subscription!: Subscription;
 
-  constructor(private uiService: UiService) { }
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe((val) => this.showAddTask = val);
+  }
 
   ngOnInit(): void {
   }

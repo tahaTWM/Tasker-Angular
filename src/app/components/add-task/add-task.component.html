@@ -1,16 +1,16 @@
-<form class="add-form" (ngSubmit)="onSubmit()">
-  <div class="form-Control">
-    <label for="text">Task</label><br>
-    <input [(ngModel)]="text" type="text" name="text" id="text" placeholder="Add Task">
-  </div>
-  <div class="form-Control">
-    <label for="day">Day & Time</label><br>
-    <input [(ngModel)]="day" type="text" name="day" id="text" placeholder="add Day and Time">
-  </div>
-  <br>
-  <div class="form-Control forn-control-check">
-    <label for="reminder" class="reminder">Set Reminder</label>
-    <input [(ngModel)]="reminder" type="checkbox" name="reminder" id="reminder">
-  </div>
-  <input type="submit" value="Save Task" class="btn btn-block">
+<form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-Control">
+        <label for="text">Task</label><br>
+        <input [(ngModel)]="text" type="text" name="text" id="text" placeholder="Add Task">
+    </div>
+    <div class="form-Control">
+        <label for="day">Day & Time</label><br>
+        <input [(ngModel)]="day" type="text" name="day" id="text" placeholder="add Day and Time">
+    </div>
+    <br>
+    <div class="form-Control forn-control-check">
+        <label for="reminder" class="reminder">Set Reminder</label>
+        <input [(ngModel)]="reminder" type="checkbox" name="reminder" id="reminder">
+    </div>
+    <input type="submit" value="Save Task" class="btn btn-block">
 </form>
